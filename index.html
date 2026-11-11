@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdoul Mouhamed Diouf</title>
+<meta name="description" content="Abdoul Mouhamed Diouf, doctorant en économie à l'UCAD (Dakar). Évaluation d'impact, suivi-évaluation (MEAL), IA et agriculture, genre, data science. PhD candidate in economics, impact evaluation and MEAL.">
+<meta property="og:title" content="Abdoul Mouhamed Diouf, doctorant en économie / PhD candidate in economics">
+<meta property="og:description" content="Évaluation d'impact, suivi-évaluation, IA et agriculture au Sénégal. UCAD, Dakar.">
+<meta property="og:type" content="profile">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Abdoul Mouhamed Diouf","jobTitle":"PhD Candidate in Economics","affiliation":{"@type":"CollegeOrUniversity","name":"Université Cheikh Anta Diop de Dakar"},"alumniOf":"Université Cheikh Anta Diop de Dakar","knowsAbout":["Impact evaluation","Monitoring, evaluation, accountability and learning","AI in agriculture","Gender audit","Data science"],"address":{"@type":"PostalAddress","addressLocality":"Dakar","addressCountry":"SN"},"sameAs":["https://orcid.org/0009-0003-9743-404X","https://www.linkedin.com/in/abdoul-mouhamed-diouf"]}
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky green header; hero band; then sections as a label column (left) + content (right), stacking on phones. */
+:root{
+  --bg:#F5F5EE;
+  --surface:#FFFFFF;
+  --fg:#16241E;
+  --muted:#55645C;
+  --line:#D9DDD0;
+  --green:#0F3D2E;
+  --green-2:#1B5A44;
+  --gold:#8F6A1E;
+  --gold-soft:#EFE6CC;
+  --on-green:#F3F1E6;
+  --on-green-muted:#B9C7BE;
+  --gold-on-green:#D9B765;
+  --hdr:#0F3D2E;
+  --focus:#8F6A1E;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A1B15;--surface:#10281F;--fg:#E9EDE3;--muted:#A3B3A9;--line:#24402F;
+    --green:#0F3D2E;--green-2:#2A7A5C;--gold:#D4AF63;--gold-soft:#2A2616;
+    --on-green:#F3F1E6;--on-green-muted:#B9C7BE;--gold-on-green:#D9B765;
+    --hdr:#071510;--focus:#D4AF63;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A1B15;--surface:#10281F;--fg:#E9EDE3;--muted:#A3B3A9;--line:#24402F;
+  --green:#0F3D2E;--green-2:#2A7A5C;--gold:#D4AF63;--gold-soft:#2A2616;
+  --on-green:#F3F1E6;--on-green-muted:#B9C7BE;--gold-on-green:#D9B765;
+  --hdr:#071510;--focus:#D4AF63;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:30}
+body [lang="fr"]{display:none}
+body [lang="en"]{display:none}
+html[data-lang="fr"] body [lang="fr"]{display:revert}
+html[data-lang="en"] body [lang="en"]{display:revert}
+html:not([data-lang]) body [lang="fr"]{display:revert}
+html[data-lang="fr"] body span[lang="fr"],html[data-lang="en"] body span[lang="en"],html:not([data-lang]) body span[lang="fr"]{display:inline}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--hdr);color:var(--on-green);
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))) calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
+  border-bottom:1px solid rgba(217,183,101,.35)}
+.hdr .wrap{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;padding-block:10px}
+.brand{font-family:var(--display);font-size:1.25rem;font-weight:600;text-decoration:none;color:var(--on-green);letter-spacing:.01em;margin-right:auto}
+.brand span{color:var(--gold-on-green)}
+.nav{display:flex;gap:2px;overflow-x:auto;order:3;width:100%;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:.8125rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--on-green-muted);padding:8px 10px;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--on-green)}
+.nav a.on{color:var(--on-green);border-bottom-color:var(--gold-on-green)}
+.ctl{display:flex;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1px solid rgba(243,241,230,.3);border-radius:4px;overflow:hidden}
+.seg button{background:transparent;color:var(--on-green-muted);border:0;font:500 .75rem var(--mono);letter-spacing:.08em;padding:6px 10px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold-on-green);color:#0F2A20}
+.tbtn{background:transparent;color:var(--on-green);border:1px solid rgba(243,241,230,.3);border-radius:4px;font:500 .75rem var(--mono);letter-spacing:.08em;padding:6px 10px;cursor:pointer}
+@media (min-width:980px){.nav{order:0;width:auto;overflow:visible}.hdr .wrap{flex-wrap:nowrap}.brand{margin-right:0}.nav{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--green);color:var(--on-green);
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))) calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
+  padding-block:clamp(40px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:40px}
+.hero .id{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.photo{width:120px;height:120px;border-radius:50%;border:2px solid var(--gold-on-green);object-fit:cover;flex:none;background:#fff}
+.eyebrow{font:500 .75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-on-green);margin:0}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:1.04;letter-spacing:-.02em;margin:8px 0 6px;text-wrap:balance}
+.aff{color:var(--on-green-muted);margin:0;font-size:1.0625rem}
+.lede{font-size:1.1875rem;line-height:1.6;max-width:62ch;margin:0;color:var(--on-green)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{font-size:.8125rem;border:1px solid rgba(217,183,101,.5);color:var(--on-green);padding:4px 12px;border-radius:999px}
+.jmp{background:rgba(0,0,0,.18);border:1px solid var(--gold-on-green);border-radius:8px;padding:24px;max-width:70ch}
+.jmp h2{font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.25;margin:6px 0 10px;text-wrap:balance}
+.jmp p{margin:0 0 16px;color:var(--on-green);font-size:.9375rem}
+.btn{display:inline-block;font-size:.875rem;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:4px;border:1px solid var(--gold-on-green);color:#0F2A20;background:var(--gold-on-green)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--on-green)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* sections */
+section{padding-block:clamp(40px,6vw,72px);border-bottom:1px solid var(--line);scroll-margin-top:120px}
+section:last-of-type{border-bottom:0}
+.sec{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:860px){.sec{grid-template-columns:200px minmax(0,1fr);gap:48px}}
+.sec > *{min-width:0}
+.label{font:500 .75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0;padding-top:.5rem}
+h2.t{font-family:var(--display);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.15;margin:0 0 20px;letter-spacing:-.01em;text-wrap:balance}
+h3{font-family:var(--display);font-weight:600;font-size:1.3125rem;line-height:1.3;margin:0 0 6px;text-wrap:balance}
+p{margin:0 0 14px;max-width:68ch}
+.muted{color:var(--muted)}
+
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:1fr;gap:2px;padding:16px 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0;padding-top:0}
+@media (min-width:640px){.tl li{grid-template-columns:150px minmax(0,1fr);gap:24px}}
+.tl .d{font:500 .8125rem var(--mono);color:var(--gold);padding-top:.2rem}
+.tl strong{font-weight:600}
+.tl ul{margin:8px 0 0;padding-left:18px;font-size:.9375rem;max-width:68ch}
+.tl ul li{display:list-item;border:0;padding:2px 0;grid-template-columns:none}
+.sub{margin:28px 0 12px;font:500 .75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sub:first-child{margin-top:0}
+
+.paper{padding:22px 0;border-top:1px solid var(--line)}
+.paper:first-of-type{border-top:0;padding-top:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 10px;font-size:.875rem;color:var(--muted)}
+.tag{font:500 .6875rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:3px;padding:1px 6px}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:.875rem;font-weight:600;color:var(--green-2);width:fit-content;margin-bottom:12px}
+html[data-theme="dark"] summary{color:var(--gold)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) summary{color:var(--gold)}}
+.plinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.875rem;font-weight:600;margin-top:6px}
+.plinks a{color:var(--green-2);text-underline-offset:3px;overflow-wrap:anywhere}
+html[data-theme="dark"] .plinks a{color:var(--gold)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .plinks a{color:var(--gold)}}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:1.125rem;margin:0}
+.card p{margin:0;font-size:.9375rem}
+.card .chips{margin-top:auto}
+.card .chips li{color:var(--muted);border-color:var(--line);font-size:.75rem;padding:2px 10px}
+
+.award{display:inline-block;background:var(--gold-soft);border:1px solid var(--gold);color:var(--fg);border-radius:4px;padding:6px 12px;font-size:.875rem;margin:0 0 20px}
+
+.contact{display:grid;gap:0;margin:0}
+.contact div{display:grid;grid-template-columns:1fr;gap:2px;padding:14px 0;border-top:1px solid var(--line)}
+.contact div:first-child{border-top:0;padding-top:0}
+@media (min-width:640px){.contact div{grid-template-columns:120px minmax(0,1fr);gap:24px}}
+.contact dt{font:500 .75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding-top:.2rem}
+.contact dd{margin:0;display:flex;gap:10px;flex-wrap:wrap;align-items:center;overflow-wrap:anywhere}
+.cp{font:500 .75rem var(--mono);background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:4px;padding:4px 10px;cursor:pointer}
+.cp:hover{border-color:var(--gold)}
+footer{padding-block:32px 40px;color:var(--muted);font-size:.8125rem;display:flex;gap:8px 24px;flex-wrap:wrap;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#home">Abdoul Mouhamed <span>Diouf</span></a>
+    <div class="ctl">
+      <div class="seg" role="group" aria-label="Langue / Language">
+        <button type="button" id="b-fr" aria-pressed="true">FR</button>
+        <button type="button" id="b-en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="tbtn" id="theme" aria-label="Thème / Theme">◐</button>
+    </div>
+    <nav class="nav" aria-label="Navigation">
+      <a href="#home"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+      <a href="#about"><span lang="fr">À propos</span><span lang="en">About</span></a>
+      <a href="#research"><span lang="fr">Recherche</span><span lang="en">Research</span></a>
+      <a href="#experience"><span lang="fr">Expérience</span><span lang="en">Experience</span></a>
+      <a href="#teaching"><span lang="fr">Interventions</span><span lang="en">Teaching &amp; training</span></a>
+      <a href="#projects"><span lang="fr">Projets</span><span lang="en">Projects</span></a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <div class="wrap">
+    <div class="id">
+      <img class="photo" src="photo.png" alt="Abdoul Mouhamed Diouf" width="120" height="120">
+      <div>
+        <p class="eyebrow"><span lang="fr">Doctorant en économie · UCAD</span><span lang="en">PhD candidate in economics · UCAD</span></p>
+        <h1>Abdoul Mouhamed Diouf</h1>
+        <p class="aff">Université Cheikh Anta Diop de Dakar · <span lang="fr">Suivi-évaluation et analyse des politiques publiques</span><span lang="en">Monitoring, evaluation and public policy analysis</span></p>
+      </div>
+    </div>
+    <p class="lede" lang="fr">Économiste du développement et spécialiste de l'évaluation des politiques, programmes et projets. Je produis des données probantes, par l'évaluation d'impact et la data science, pour éclairer la décision publique et renforcer les systèmes de suivi-évaluation en Afrique francophone.</p>
+    <p class="lede" lang="en">Development economist specialising in the evaluation of policies, programmes and projects. I produce robust evidence through impact evaluation and data science to inform public decisions and strengthen monitoring and evaluation systems in francophone Africa.</p>
+    <ul class="chips">
+      <li><span lang="fr">Évaluation d'impact</span><span lang="en">Impact evaluation</span></li>
+      <li><span lang="fr">Suivi-évaluation (MEAL)</span><span lang="en">MEAL</span></li>
+      <li><span lang="fr">IA et agriculture</span><span lang="en">AI and agriculture</span></li>
+      <li><span lang="fr">Genre et inclusion</span><span lang="en">Gender and inclusion</span></li>
+      <li>Data science</li>
+    </ul>
+    <div class="jmp">
+      <p class="eyebrow"><span lang="fr">Thèse de doctorat · depuis 2025</span><span lang="en">Doctoral thesis · since 2025</span></p>
+      <h2 lang="fr">Adoption de l'IA dans l'agriculture : impacts sur la croissance, l'emploi des jeunes et des femmes et la classe moyenne au Sénégal</h2>
+      <h2 lang="en">AI adoption in agriculture: impacts on growth, youth and women's employment and the middle class in Senegal</h2>
+      <p lang="fr">Modélisation macro-micro avec un modèle d'équilibre général calculable microsimulé, développée depuis mon mémoire de Master 2 (mention Très bien).</p>
+      <p lang="en">Macro-micro modelling with a microsimulated computable general equilibrium model, developed from my Master's thesis (with highest honours).</p>
+      <div class="btns">
+        <a class="btn" href="#research"><span lang="fr">Voir la recherche</span><span lang="en">See the research</span></a>
+        <a class="btn ghost" href="CV_Abdoul_Mouhamed_Diouf.pdf" target="_blank" rel="noopener"><span lang="fr">CV (PDF)</span><span lang="en">CV (PDF)</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section id="about">
+  <div class="sec">
+    <p class="label"><span lang="fr">À propos</span><span lang="en">About</span></p>
+    <div>
+      <h2 class="t"><span lang="fr">Parcours et profil</span><span lang="en">Background and profile</span></h2>
+      <p lang="fr">Doctorant en économie à l'UCAD, titulaire d'un Master 2 en évaluation de l'impact des politiques publiques. J'ai plus de deux ans d'expérience en suivi-évaluation et en recherche appliquée : conception et conduite d'enquêtes quantitatives et qualitatives, analyse statistique et économétrique avec Stata, R et Python, intégration du genre dans les dispositifs d'évaluation. Je suis Directeur du Suivi, de l'Évaluation, de l'Apprentissage et de la Capitalisation de Jeunes Évaluateurs du Sénégal (YEE Sénégal).</p>
+      <p lang="en">PhD candidate in economics at UCAD, with a Master's in public policy impact evaluation. I have more than two years of experience in monitoring and evaluation and applied research: designing and running quantitative and qualitative surveys, statistical and econometric analysis with Stata, R and Python, and integrating gender into evaluation systems. I am Director of Monitoring, Evaluation, Learning and Capitalisation at Young Evaluators of Senegal (YEE Sénégal).</p>
+
+      <p class="sub"><span lang="fr">Formation</span><span lang="en">Education</span></p>
+      <ul class="tl">
+        <li><span class="d">2025 – <span lang="fr">présent</span><span lang="en">present</span></span><div><strong><span lang="fr">Doctorat en économie</span><span lang="en">PhD in Economics</span></strong><br><span class="muted">Université Cheikh Anta Diop de Dakar (UCAD), ED-JPEG</span></div></li>
+        <li><span class="d">2022 – 2023</span><div><strong><span lang="fr">Master 2, évaluation de l'impact des politiques publiques (MEIPP)</span><span lang="en">Master 2, Public Policy Impact Evaluation (MEIPP)</span></strong><br><span class="muted">UCAD, FASEG · <span lang="fr">Mention Très Bien, 16,5/20</span><span lang="en">Highest honours, 16.5/20</span></span></div></li>
+        <li><span class="d">2021 – 2022</span><div><strong><span lang="fr">Master 1, évaluation de l'impact des politiques publiques</span><span lang="en">Master 1, Public Policy Impact Evaluation</span></strong><br><span class="muted">UCAD, FASEG</span></div></li>
+        <li><span class="d">2020 – 2021</span><div><strong><span lang="fr">Licence en économie, analyse et politiques économiques</span><span lang="en">Bachelor's in Economics, Analysis and Economic Policy</span></strong><br><span class="muted">UCAD, FASEG</span></div></li>
+      </ul>
+
+      <p class="sub"><span lang="fr">Outils</span><span lang="en">Tools</span></p>
+      <ul class="tl">
+        <li><span class="d"><span lang="fr">Analyse</span><span lang="en">Analysis</span></span><div>Stata, R, Python, Excel, XLSTAT, NVivo</div></li>
+        <li><span class="d"><span lang="fr">Modélisation</span><span lang="en">Modelling</span></span><div><span lang="fr">MEGC sous GAMS, matrices de comptabilité sociale (SAM)</span><span lang="en">CGE modelling in GAMS, Social Accounting Matrices (SAM)</span></div></li>
+        <li><span class="d"><span lang="fr">Données</span><span lang="en">Data</span></span><div>SQL / PostgreSQL, QGIS, Power BI, KoboToolbox, ODK / XLSForm</div></li>
+        <li><span class="d">Machine learning</span><div>scikit-learn, Streamlit, Google Colab, GitHub</div></li>
+        <li><span class="d"><span lang="fr">Langues</span><span lang="en">Languages</span></span><div><span lang="fr">Français (avancé), anglais (intermédiaire), wolof</span><span lang="en">French (advanced), English (intermediate), Wolof</span></div></li>
+      </ul>
+
+      <p class="sub"><span lang="fr">Formations et certifications</span><span lang="en">Training and certifications</span></p>
+      <details>
+        <summary><span lang="fr">Afficher la liste</span><span lang="en">Show the list</span></summary>
+        <ul class="tl">
+          <li><span class="d"><span lang="fr">Suivi-évaluation</span><span lang="en">M&amp;E</span></span><div>MEAL DPro (CEFED, 2026) · Building Blocks of Effective National Monitoring and Evaluation Systems (Open Learning Campus, Banque mondiale / GEI, 2026) · Parcours Assistant Suivi-Évaluation (ABED Academy, 2026)</div></li>
+          <li><span class="d"><span lang="fr">Impact et recherche</span><span lang="en">Impact and research</span></span><div>Evaluating Impact in Low- and Middle-Income Countries (World Bank Group, edX, 2025–2026) · Manage Successful Field Research (DIME Analytics, 2026) · Reproducible Research Fundamentals (DIME Analytics, 2023) · <span lang="fr">Rédaction d'articles scientifiques en évaluation (SENEVAL / CLEAR-FA / USAID, 2024)</span><span lang="en">Writing scientific articles in evaluation (SENEVAL / CLEAR-FA / USAID, 2024)</span> · <span lang="fr">Méthodologie de recherche et proposition de recherche (COFEB / BCEAO, 2026)</span><span lang="en">Research methodology and research proposal writing (COFEB / BCEAO, 2026)</span></div></li>
+          <li><span class="d"><span lang="fr">Genre et politiques</span><span lang="en">Gender and policy</span></span><div><span lang="fr">Intégration de l'égalité et de l'inclusion de genre dans la recherche (PEP, 2026) · Gestion de politique sensible au genre (IDEP, 2026) · Politique sociale pour planificateurs du développement (IDEP, 2024)</span><span lang="en">Integrating gender equality and inclusion in research (PEP, 2026) · Gender-sensitive policy management (IDEP, 2026) · Social policy for development planners (IDEP, 2024)</span></div></li>
+          <li><span class="d"><span lang="fr">Données et outils</span><span lang="en">Data and tools</span></span><div><span lang="fr">Data Science et Machine Learning (AIMS Sénégal, en cours) · Economy-wide modeling for policy analysis, CGE, GAMS et SAM (EU International Partnerships Academy, 2026) · Analyse qualitative avec NVivo (AEGC, 2026) · Analyse de données : Excel, Python, R, Power BI (FORCE N / UN-CHK / Fondation Mastercard, 2023–2024) · Programme Ambassadeurs KoboToolbox (2025)</span><span lang="en">Data Science and Machine Learning (AIMS Senegal, ongoing) · Economy-wide modeling for policy analysis, CGE, GAMS and SAM (EU International Partnerships Academy, 2026) · Qualitative analysis with NVivo (AEGC, 2026) · Data analysis: Excel, Python, R, Power BI (FORCE N / UN-CHK / Mastercard Foundation, 2023–2024) · KoboToolbox Ambassadors Programme (2025)</span></div></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="sec">
+    <p class="label"><span lang="fr">Recherche</span><span lang="en">Research</span></p>
+    <div>
+      <h2 class="t"><span lang="fr">Thèse, publications et travaux en cours</span><span lang="en">Thesis, publications and ongoing work</span></h2>
+
+      <p class="sub"><span lang="fr">Thèse</span><span lang="en">Thesis</span></p>
+      <article class="paper">
+        <h3 lang="fr">Adoption de l'IA dans l'agriculture et impacts sur la croissance, l'emploi et la classe moyenne au Sénégal</h3>
+        <h3 lang="en">AI adoption in agriculture and impacts on growth, employment and the middle class in Senegal</h3>
+        <div class="meta"><span class="tag"><span lang="fr">En cours</span><span lang="en">Ongoing</span></span><span>UCAD</span></div>
+        <p lang="fr">J'étudie l'effet de l'adoption de l'IA dans l'agriculture sur la croissance, l'emploi des jeunes et des femmes et la classe moyenne. Le travail s'appuie sur un modèle d'équilibre général calculable microsimulé. En parallèle, je soutiens la coordination du projet de recherche du LINC sur le même thème : revues de littérature, analyses empiriques, cartographie des startups agricoles utilisant l'IA, effets différenciés selon le sexe, l'âge et le milieu.</p>
+        <p lang="en">I study how AI adoption in agriculture affects growth, youth and women's employment and the middle class. The work relies on a microsimulated computable general equilibrium model. I also support the coordination of the LINC research project on the same theme: literature reviews, empirical analyses, mapping of agricultural startups using AI, and effects differentiated by sex, age and urban or rural setting.</p>
+      </article>
+      <article class="paper">
+        <h3 lang="fr">Mémoire de Master 2 : adoption de l'IA dans l'agriculture via un modèle d'équilibre général calculable microsimulé</h3>
+        <h3 lang="en">Master's thesis: AI adoption in agriculture through a microsimulated computable general equilibrium model</h3>
+        <div class="meta"><span class="tag">2023</span><span><span lang="fr">Mention Très Bien</span><span lang="en">Highest honours</span></span><span>UCAD, FASEG</span></div>
+      </article>
+
+      <p class="sub"><span lang="fr">Publications</span><span lang="en">Publications</span></p>
+      <article class="paper">
+        <h3>Évaluation d'impact des programmes radiophoniques de AICCRA-Sénégal : connaissances, pratiques agro-écologiques et revenus</h3>
+        <div class="meta"><span class="tag">AICCRA Report 2025</span><span>Thiam, M., <strong>Diouf, A. M.</strong>, Worou, O. N., Camara, B., &amp; Wane, A.</span></div>
+        <div class="plinks"><a href="https://hdl.handle.net/10568/177714" target="_blank" rel="noopener">hdl.handle.net/10568/177714</a></div>
+      </article>
+      <article class="paper">
+        <h3>iSAT : collecter les retours clés des agriculteurs bénéficiaires des services d'agro-conseil via le système Jokalante (IVR)</h3>
+        <div class="meta"><span class="tag">AICCRA Report 2025</span><span>Thiam, M., <strong>Diouf, A. M.</strong>, Worou, O. N., Houessionon, P., Joseph, J. E., Wane, A., &amp; Whitbread, A.</span></div>
+        <div class="plinks"><a href="https://hdl.handle.net/10568/177687" target="_blank" rel="noopener">hdl.handle.net/10568/177687</a></div>
+      </article>
+      <article class="paper">
+        <h3>MELIA results 2024: evaluation of AICCRA interventions in Senegal on access to and use of climate-smart agriculture (CSA) and climate information services (CIS)</h3>
+        <div class="meta"><span class="tag">AICCRA Report 2024</span><span>Thiam, M., <strong>Diouf, A. M.</strong>, Said, S., Kengne, J., Houessionon, P., Edorh, T., Worou, N., &amp; Wane, A.</span></div>
+        <div class="plinks"><a href="https://hdl.handle.net/10568/168795" target="_blank" rel="noopener">hdl.handle.net/10568/168795</a></div>
+      </article>
+      <article class="paper">
+        <h3>Key insight on the use of improved millet and groundnut varieties in dryland areas of Senegal</h3>
+        <div class="meta"><span class="tag">AICCRA Brief 2024</span><span><strong>Diouf, A. M.</strong>, Thiam, M., Houessionon, P., Akinseye, F., Worou, N., &amp; Wane, A.</span></div>
+        <div class="plinks"><a href="https://hdl.handle.net/10568/168717" target="_blank" rel="noopener">hdl.handle.net/10568/168717</a></div>
+      </article>
+
+      <p class="sub"><span lang="fr">En préparation</span><span lang="en">In preparation</span></p>
+      <article class="paper">
+        <h3 lang="fr">Manuscrit sur les systèmes d'élevage au Sénégal</h3>
+        <h3 lang="en">Manuscript on livestock systems in Senegal</h3>
+        <p lang="fr">Fondé sur l'analyse de la diversité des systèmes d'élevage (analyse en composantes principales et classification ascendante hiérarchique) dans le cadre du projet AICCRA de l'ILRI.</p>
+        <p lang="en">Based on the analysis of livestock-system diversity (principal component analysis and hierarchical clustering) within the ILRI AICCRA project.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec">
+    <p class="label"><span lang="fr">Expérience</span><span lang="en">Experience</span></p>
+    <div>
+      <h2 class="t"><span lang="fr">Parcours professionnel</span><span lang="en">Professional experience</span></h2>
+      <ul class="tl">
+        <li><span class="d"><span lang="fr">Depuis janv. 2025</span><span lang="en">Since Jan 2025</span></span><div><strong><span lang="fr">Assistant en suivi-évaluation et analyse de données</span><span lang="en">M&amp;E and data analysis assistant</span></strong><br><span class="muted">CEE EVAL, Dakar</span>
+          <ul>
+            <li><span lang="fr">Mise en place des systèmes de suivi-évaluation du Ministère de l'Urbanisme, des Collectivités territoriales et de l'Aménagement des territoires, et du Ministère de la Fonction publique et de la Réforme du Service public.</span><span lang="en">Setting up the M&amp;E systems of the Ministry of Urban Planning, Local Authorities and Regional Development, and of the Ministry of Civil Service and Public Service Reform.</span></li>
+            <li><span lang="fr">Contribution à l'évaluation finale du projet KMS3 (méthodes quasi-expérimentales, analyse coûts-avantages).</span><span lang="en">Contribution to the final evaluation of the KMS3 project (quasi-experimental methods, cost-benefit analysis).</span></li>
+          </ul></div></li>
+        <li><span class="d"><span lang="fr">Depuis janv. 2025</span><span lang="en">Since Jan 2025</span></span><div><strong><span lang="fr">Assistant de recherche (temps partiel)</span><span lang="en">Research assistant (part-time)</span></strong><br><span class="muted"><span lang="fr">Laboratoire de recherche sur les institutions et la croissance (LINC), UCAD</span><span lang="en">Laboratory for Research on Institutions and Growth (LINC), UCAD</span></span>
+          <ul>
+            <li><span lang="fr">Appui à la coordination du projet « Adoption de l'IA dans l'agriculture : impacts sur l'emploi des jeunes, des femmes et la classe moyenne au Sénégal ».</span><span lang="en">Support to the coordination of the project on AI adoption in agriculture and its effects on youth and women's employment and the middle class in Senegal.</span></li>
+            <li><span lang="fr">Revues de littérature, analyses empiriques, rédaction scientifique, suivi du chronogramme des livrables.</span><span lang="en">Literature reviews, empirical analyses, scientific writing, deliverables tracking.</span></li>
+          </ul></div></li>
+        <li><span class="d"><span lang="fr">Janv. – mai 2026</span><span lang="en">Jan – May 2026</span></span><div><strong><span lang="fr">Consultant junior associé, audit genre</span><span lang="en">Associate junior consultant, gender audit</span></strong><br><span class="muted"><span lang="fr">Ministère de l'Industrie et du Commerce · ENAP, projet PRIEEG</span><span lang="en">Ministry of Industry and Trade · ENAP, PRIEEG project</span></span>
+          <ul>
+            <li><span lang="fr">Stratégie d'audit genre en cinq phases : analyse documentaire, échantillonnage raisonné, collecte, traitement, validation.</span><span lang="en">Five-phase gender audit strategy: document review, purposive sampling, data collection, processing, validation.</span></li>
+            <li><span lang="fr">Guides d'entretien et formulaires KoboToolbox ; collecte auprès de 34 structures à Dakar, Ziguinchor, Kaolack et Saint-Louis, avec focus groups et entretiens auprès de GIE de femmes et de jeunes.</span><span lang="en">Interview guides and KoboToolbox forms; data collection in 34 structures across Dakar, Ziguinchor, Kaolack and Saint-Louis, with focus groups and interviews with women's and youth economic interest groups.</span></li>
+            <li><span lang="fr">Rédaction du rapport d'audit et contribution à un Plan d'institutionnalisation du genre sur cinq ans.</span><span lang="en">Drafting of the audit report and contribution to a five-year Gender Institutionalisation Plan.</span></li>
+          </ul></div></li>
+        <li><span class="d"><span lang="fr">Mars – déc. 2025</span><span lang="en">Mar – Dec 2025</span></span><div><strong><span lang="fr">Évaluateur d'impact junior et assistant de recherche</span><span lang="en">Junior impact evaluator and research assistant</span></strong><br><span class="muted">International Livestock Research Institute (ILRI), projet AICCRA, Dakar</span>
+          <ul>
+            <li><span lang="fr">Questionnaires numériques sous KoboToolbox pour une enquête auprès de 500 ménages dans 7 régions ; formation de 12 enquêteurs ; supervision de deux missions de terrain (17 et 14 jours).</span><span lang="en">KoboToolbox questionnaires for a survey of 500 households in 7 regions; training of 12 enumerators; supervision of two field missions (17 and 14 days).</span></li>
+            <li><span lang="fr">Analyse de la diversité des systèmes d'élevage (ACP, CAH sous R) et cartographie sous QGIS ; données traitées sous Excel, Stata et Python.</span><span lang="en">Analysis of livestock-system diversity (PCA, hierarchical clustering in R) and mapping in QGIS; data processed in Excel, Stata and Python.</span></li>
+            <li><span lang="fr">Rapports d'évaluation et de suivi (MELIA, iSAT, programmes radiophoniques) pour des bailleurs internationaux.</span><span lang="en">Evaluation and monitoring reports (MELIA, iSAT, radio programmes) for international donors.</span></li>
+          </ul></div></li>
+        <li><span class="d"><span lang="fr">Mai – déc. 2024</span><span lang="en">May – Dec 2024</span></span><div><strong><span lang="fr">Stagiaire évaluateur d'impact junior</span><span lang="en">Junior impact evaluation intern</span></strong><br><span class="muted">ILRI, projet AICCRA, Dakar</span>
+          <ul>
+            <li><span lang="fr">Effet des services d'information climatique et de l'agriculture intelligente face au climat sur les rendements, par appariement sur score de propension (Stata).</span><span lang="en">Effect of climate information services and climate-smart agriculture on yields, using propensity score matching (Stata).</span></li>
+          </ul></div></li>
+        <li><span class="d">2024</span><div><strong><span lang="fr">Stagiaire en recherche qualitative</span><span lang="en">Qualitative research intern</span></strong><br><span class="muted"><span lang="fr">Projet Banque mondiale, UCAD</span><span lang="en">World Bank project, UCAD</span></span>
+          <ul>
+            <li><span lang="fr">Retranscription et revue de littérature sur les aspirations des jeunes face au marché du travail sénégalais.</span><span lang="en">Transcription and literature review on young people's aspirations in the Senegalese labour market.</span></li>
+          </ul></div></li>
+      </ul>
+
+      <p class="sub"><span lang="fr">Engagement professionnel</span><span lang="en">Professional service</span></p>
+      <ul class="tl">
+        <li><span class="d">2026</span><div><strong><span lang="fr">Directeur du Suivi, de l'Évaluation, de l'Apprentissage et de la Capitalisation</span><span lang="en">Director of Monitoring, Evaluation, Learning and Capitalisation</span></strong><br><span class="muted">Jeunes Évaluateurs du Sénégal (YEE Sénégal)</span></div></li>
+        <li><span class="d"><span lang="fr">Membre</span><span lang="en">Member</span></span><div><strong><span lang="fr">Société sénégalaise d'évaluation (SENEVAL)</span><span lang="en">Senegalese Evaluation Society (SENEVAL)</span></strong></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="sec">
+    <p class="label"><span lang="fr">Interventions</span><span lang="en">Teaching &amp; training</span></p>
+    <div>
+      <h2 class="t"><span lang="fr">Formation, encadrement et animation</span><span lang="en">Training, supervision and facilitation</span></h2>
+      <ul class="tl">
+        <li><span class="d">2025</span><div><strong><span lang="fr">Formation et encadrement d'enquêteurs</span><span lang="en">Enumerator training and supervision</span></strong><br><span class="muted">ILRI, AICCRA Sénégal</span><br><span lang="fr">Formation de 12 enquêteurs, animation de sessions de restitution et supervision de deux missions de terrain auprès de 500 ménages.</span><span lang="en">Training of 12 enumerators, facilitation of feedback sessions and supervision of two field missions covering 500 households.</span></div></li>
+        <li><span class="d">2026</span><div><strong><span lang="fr">Animation de focus groups</span><span lang="en">Focus group facilitation</span></strong><br><span class="muted"><span lang="fr">Audit genre, Ministère de l'Industrie et du Commerce</span><span lang="en">Gender audit, Ministry of Industry and Trade</span></span><br><span lang="fr">Entretiens et focus groups auprès des points focaux genre et de groupements d'intérêt économique de femmes et de jeunes.</span><span lang="en">Interviews and focus groups with gender focal points and women's and youth economic interest groups.</span></div></li>
+        <li><span class="d">2026</span><div><strong><span lang="fr">Animation de la fonction Suivi, Évaluation, Apprentissage et Capitalisation</span><span lang="en">Leading the M&amp;E, learning and capitalisation function</span></strong><br><span class="muted">YEE Sénégal</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec">
+    <p class="label"><span lang="fr">Projets</span><span lang="en">Projects</span></p>
+    <div>
+      <h2 class="t"><span lang="fr">Data science, IA et MEAL</span><span lang="en">Data science, AI and MEAL</span></h2>
+      <div class="grid">
+        <article class="card">
+          <h3><span lang="fr">Modèle d'équilibre général microsimulé</span><span lang="en">Microsimulated general equilibrium model</span></h3>
+          <p lang="fr">Modélisation macro-micro de l'adoption de l'IA dans l'agriculture sénégalaise, issue du mémoire de Master 2 et poursuivie dans la thèse.</p>
+          <p lang="en">Macro-micro modelling of AI adoption in Senegalese agriculture, from the Master's thesis and continued in the PhD.</p>
+          <ul class="chips"><li>GAMS</li><li>Stata</li><li>SAM</li></ul>
+        </article>
+        <article class="card">
+          <h3><span lang="fr">Évaluation d'impact des services climatiques</span><span lang="en">Impact evaluation of climate services</span></h3>
+          <p lang="fr">Étude quasi-expérimentale de l'effet des services d'information climatique et de l'agriculture intelligente face au climat sur les rendements (ILRI, 2024–2025).</p>
+          <p lang="en">Quasi-experimental study of the effect of climate information services and climate-smart agriculture on yields (ILRI, 2024–2025).</p>
+          <ul class="chips"><li>PSM</li><li>Stata</li></ul>
+        </article>
+        <article class="card">
+          <h3><span lang="fr">Audit genre, 34 structures</span><span lang="en">Gender audit, 34 structures</span></h3>
+          <p lang="fr">Audit en cinq phases pour le Ministère de l'Industrie et du Commerce, avec Plan d'institutionnalisation du genre (PRIEEG-ENAP).</p>
+          <p lang="en">Five-phase audit for the Ministry of Industry and Trade, with a Gender Institutionalisation Plan (PRIEEG-ENAP).</p>
+          <ul class="chips"><li>KoboToolbox</li><li>NVivo</li><li><span lang="fr">Qualitatif</span><span lang="en">Qualitative</span></li></ul>
+        </article>
+        <article class="card">
+          <h3><span lang="fr">Systèmes d'élevage au Sénégal</span><span lang="en">Livestock systems in Senegal</span></h3>
+          <p lang="fr">Enquête auprès de 500 ménages dans 7 régions, typologie des systèmes d'élevage et cartographie.</p>
+          <p lang="en">Survey of 500 households across 7 regions, livestock-system typology and mapping.</p>
+          <ul class="chips"><li>R</li><li>ACP / CAH</li><li>QGIS</li></ul>
+        </article>
+        <article class="card">
+          <h3><span lang="fr">TSIP : suivi mensuel S&amp;E automatisé</span><span lang="en">TSIP: automated monthly M&amp;E tracker</span></h3>
+          <p lang="fr">Outil Excel avec tableau de bord automatisé et 8 feuilles structurées, bâti sur données fictives pour YEE Sénégal / AfrEA.</p>
+          <p lang="en">Excel tool with an automated dashboard and 8 structured sheets, built on fictional data for YEE Sénégal / AfrEA.</p>
+          <ul class="chips"><li>Excel</li><li>PMP</li><li>MEAL</li></ul>
+        </article>
+        <article class="card">
+          <h3><span lang="fr">Modèles prédictifs et tableaux de bord</span><span lang="en">Predictive models and dashboards</span></h3>
+          <p lang="fr">Applications d'apprentissage supervisé (projet AIMS) et tableau de bord Power BI de performance du chiffre d'affaires.</p>
+          <p lang="en">Supervised learning apps (AIMS project) and a Power BI revenue performance dashboard.</p>
+          <ul class="chips"><li>scikit-learn</li><li>Streamlit</li><li>Power BI</li></ul>
+          <div class="plinks"><a href="https://app-predict-banque-amd.streamlit.app/" target="_blank" rel="noopener"><span lang="fr">Application 1</span><span lang="en">App 1</span></a><a href="https://abdoulm.streamlit.app/" target="_blank" rel="noopener"><span lang="fr">Application 2</span><span lang="en">App 2</span></a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="sec">
+    <p class="label">CV</p>
+    <div>
+      <h2 class="t"><span lang="fr">Curriculum vitæ</span><span lang="en">Curriculum vitæ</span></h2>
+      <p lang="fr">Formation, parcours professionnel, certifications, outils et livrables dans un seul document.</p>
+      <p lang="en">Education, professional experience, certifications, tools and deliverables in one document.</p>
+      <div class="btns"><a class="btn" style="background:var(--green);border-color:var(--green);color:var(--on-green)" href="CV_Abdoul_Mouhamed_Diouf.pdf" target="_blank" rel="noopener"><span lang="fr">Télécharger le CV (PDF)</span><span lang="en">Download the CV (PDF)</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec">
+    <p class="label">Contact</p>
+    <div>
+      <h2 class="t"><span lang="fr">Collaborations, candidatures, questions</span><span lang="en">Collaborations, applications, questions</span></h2>
+      <dl class="contact">
+        <div><dt>E-mail</dt><dd><span>abdoulmouhamedd@gmail.com</span><button type="button" class="cp" data-copy="abdoulmouhamedd@gmail.com"><span lang="fr">Copier</span><span lang="en">Copy</span></button></dd></div>
+        <div><dt><span lang="fr">E-mail univ.</span><span lang="en">Univ. e-mail</span></dt><dd><span>abdoulmouhamed.diouf@ucad.edu.sn</span><button type="button" class="cp" data-copy="abdoulmouhamed.diouf@ucad.edu.sn"><span lang="fr">Copier</span><span lang="en">Copy</span></button></dd></div>
+        <div><dt><span lang="fr">Téléphone</span><span lang="en">Phone</span></dt><dd><span>+221 78 477 16 03</span><button type="button" class="cp" data-copy="+221 78 477 16 03"><span lang="fr">Copier</span><span lang="en">Copy</span></button></dd></div>
+        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/abdoul-mouhamed-diouf" target="_blank" rel="noopener">linkedin.com/in/abdoul-mouhamed-diouf</a></dd></div>
+        <div><dt>ORCID</dt><dd><a href="https://orcid.org/0009-0003-9743-404X" target="_blank" rel="noopener">orcid.org/0009-0003-9743-404X</a></dd></div>
+        <div><dt><span lang="fr">Localisation</span><span lang="en">Location</span></dt><dd><span>Dakar, Sénégal</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Abdoul Mouhamed Diouf · Université Cheikh Anta Diop de Dakar</span>
+  <span lang="fr">Évaluation d'impact · MEAL · IA et agriculture</span><span lang="en">Impact evaluation · MEAL · AI and agriculture</span>
+</footer>
+</div>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function setLang(l){
+    root.setAttribute('data-lang',l);root.setAttribute('lang',l);
+    document.getElementById('b-fr').setAttribute('aria-pressed',l==='fr');
+    document.getElementById('b-en').setAttribute('aria-pressed',l==='en');
+    set('adm-lang',l);
+  }
+  setLang(get('adm-lang')==='en'?'en':'fr');
+  document.getElementById('b-fr').onclick=function(){setLang('fr')};
+  document.getElementById('b-en').onclick=function(){setLang('en')};
+
+  var saved=get('adm-theme');if(saved==='dark'||saved==='light')root.setAttribute('data-theme',saved);
+  document.getElementById('theme').onclick=function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('adm-theme',n);
+  };
+
+  [].slice.call(document.querySelectorAll('.cp')).forEach(function(b){
+    b.onclick=function(){
+      var txt=b.getAttribute('data-copy');
+      var done=function(){var o=b.innerHTML;b.textContent='✓';setTimeout(function(){b.innerHTML=o},1400)};
+      var fallback=function(){var s=b.previousElementSibling;if(!s)return;var r=document.createRange();r.selectNodeContents(s);var g=getSelection();g.removeAllRanges();g.addRange(r)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,fallback)}else{fallback()}
+    };
+  });
+
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var ids=links.map(function(a){return a.getAttribute('href').slice(1)});
+  function spy(){
+    var y=window.scrollY+160,cur=ids[0];
+    ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  }
+  addEventListener('scroll',spy,{passive:true});spy();
+})();
+</script>
+</body>
+</html>
